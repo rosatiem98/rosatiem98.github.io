@@ -11,22 +11,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Sequence Data
 
-This is a collection of DNA sequence of the entire ITS gene region in Angiosperm and Gymnosperm samples. 
+This [sequence data](https://github.com/rosatiem98/rosatiem98.github.io/blob/b683b09421b8428a629ebf75f9f32f0e1ba99ac7/plant_ITS%20(1).fasta) is a collection of DNA sequence of the entire ITS gene region in Angiosperm and Gymnosperm samples. 
 
 The purpose of this analysis is to determine the evolutionary differences between angiosperm and gymnosperm specimens. From analyzing differences a phylogenetic tree is built around the ITS gene region of these two clades. 
 
 ___
 
-## Raw Data
 https://github.com/rosatiem98/rosatiem98.github.io/blob/b683b09421b8428a629ebf75f9f32f0e1ba99ac7/plant_ITS%20(1).fasta
 
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
