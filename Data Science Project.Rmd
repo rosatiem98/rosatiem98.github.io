@@ -18,13 +18,7 @@ The purpose of this analysis is to determine the evolutionary differences betwee
 ___
 
 ## Raw Data
-```{r reads, echo=FALSE, warning=FALSE, include=FALSE}
-library(ShortRead)
-library(seqinr)
-sequences <- read.fasta(file="./plant_ITS (1).fasta")
-reads=readFasta("plant_ITS (1).fasta")
-summary(reads)
-```
+https://github.com/rosatiem98/rosatiem98.github.io/blob/b683b09421b8428a629ebf75f9f32f0e1ba99ac7/plant_ITS%20(1).fasta
 
 
 ## Including Plots

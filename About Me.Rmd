@@ -1,5 +1,5 @@
 ---
-title: "ABOUT ME" #CV Link
+title: "ABOUT ME" 
 
 ---
 ### Bibliography:
@@ -8,4 +8,5 @@ I am a  biotechnology student studying biotechnology at Utah Valley University. 
 ### Links 
 Linkedin: https://www.linkedin.com/in/ethan-rosati-91592219a/
 
+CV: https://github.com/rosatiem98/rosatiem98.github.io/blob/333e3e002dda65f1e595c339ade0cd9fd28a89ae/CV%202021.docx
 

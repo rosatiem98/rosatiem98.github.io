@@ -3,7 +3,13 @@ title: "Home"
 author: "Ethan Rosati"
 output: html_document
 ---
-#insert image
+Helpful Links:
+
+Data Science Projects: rosatiem98.github.io/Data-Science-Project.html
+
+About Me: rosatiem98.github.io/About-Me.html
+
+Research and Papers: rosatiem98.github.io/Research-and-pubs.html
 
 ___
 
