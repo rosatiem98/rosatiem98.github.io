@@ -5,11 +5,11 @@ output: html_document
 ---
 Helpful Links:
 
-###[Data Science Projects](https://rosatiem98.github.io/Data-Science-Project.html)
+[Data Science Projects](https://rosatiem98.github.io/Data-Science-Project.html)
 
-###[About Me](https://rosatiem98.github.io/About-Me.html)
+[About Me](https://rosatiem98.github.io/About-Me.html)
 
-###[Research and Papers](https://rosatiem98.github.io/Research-and-pubs.html)
+[Research and Papers](https://rosatiem98.github.io/Research-and-pubs.html)
 
 ___
 
