@@ -1,7 +1,7 @@
 ---
 title: "Data Science Project"
 author: "Ethan Rosati"
-date: "4/4/2021"
+date: 
 output: html_document
 ---
 
