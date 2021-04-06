@@ -1,0 +1,38 @@
+---
+title: "Data Science Project"
+author: "Ethan Rosati"
+date: "4/4/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Sequence Data
+
+This is a collection of DNA sequence of the entire ITS gene region in Angiosperm and Gymnosperm samples. 
+
+The purpose of this analysis is to determine the evolutionary differences between angiosperm and gymnosperm specimens. From analyzing differences a phylogenetic tree is built around the ITS gene region of these two clades. 
+
+___
+
+## Raw Data
+```{r reads, echo=FALSE, warning=FALSE, include=FALSE}
+library(ShortRead)
+library(seqinr)
+sequences <- read.fasta(file="./plant_ITS (1).fasta")
+reads=readFasta("plant_ITS (1).fasta")
+summary(reads)
+```
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
