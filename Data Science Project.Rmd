@@ -17,7 +17,6 @@ The purpose of this analysis is to determine the evolutionary differences betwee
 
 ___
 
-https://github.com/rosatiem98/rosatiem98.github.io/blob/b683b09421b8428a629ebf75f9f32f0e1ba99ac7/plant_ITS%20(1).fasta
 
 
 
