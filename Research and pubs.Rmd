@@ -7,4 +7,8 @@ ___
 Biofuel Production Senior Thesis: https://cdm17182.contentdm.oclc.org/digital/collection/UVUTheses/id/769/rec/1
 
 Phylogeny Research: 
-[Barcoding and Comparison of DNA Extractions of ITS Region Between Angiosperm and Gymnosperm Herbarium Specimens](https://github.com/rosatiem98/rosatiem98.github.io/blob/de1d6eeecb0affe7f5876bae43970f1ad698e332/UASAL%202021.pptx) 
+[Barcoding and Comparison of DNA Extractions of ITS Region Between Angiosperm and Gymnosperm Herbarium Specimens](https://github.com/rosatiem98/rosatiem98.github.io/blob/main/UASAL%202021%20poster%20%20(1).pdf)
+
+___
+
+![Phylogeny Poster.](./UASAL 2021 poster  (1).png)
