@@ -1,7 +1,6 @@
 ---
 title: "Data Science Project"
 author: "Ethan Rosati"
-date: "null"
 output:
   html_document: default
   pdf_document: default
@@ -15,9 +14,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This [sequence data](https://github.com/rosatiem98/rosatiem98.github.io/blob/b683b09421b8428a629ebf75f9f32f0e1ba99ac7/plant_ITS%20(1).fasta) is a collection of DNA sequence of the entire ITS gene region in Angiosperm and Gymnosperm samples pulled from online databases. This set of [data](https://github.com/rosatiem98/rosatiem98.github.io/blob/c03555493c164c0240d596f179b77a41cbd2ff07/Research%20Sequences.docx) is a collection of DNA sequences gathered through DNA extraction and amplification of the ITS gene region in herbarium specimens. 
 
+The analysis preformed will be done with a small DNA data set with 19 samples from the extraction DNA and 655 smaples from the online database DNA. 
+
 ![Herbarium Specimen](./Gymnosperm specimen.jpg)
 
-The purpose of this analysis is to determine the evolutionary differences between angiosperm and gymnosperm specimens. From analyzing differences a phylogenetic tree is built around the ITS gene region of these two clades. 
+The purpose of this analysis is to determine the evolutionary differences between angiosperm and gymnosperm specimens. From analyzing differences, a phylogenetic tree is built around the ITS gene region of these two clades. 
 
 ___
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -37,18 +38,16 @@ ___
 
 Read in dataset from small research dataset FASTA file 
 ```{r message=FALSE, warning=FALSE}
-example <- readDNAStringSet("../Data_Course_ROSATI/Final Project/Research sequences/DNA extraction sequences.fasta")
+research_seqs <- readDNAStringSet("../Data_Course_ROSATI/Final Project/Research sequences/DNA extraction sequences.fasta")
 
 ```
 ___
 
 Alignment of research sequences
 ```{r message=FALSE, warning=FALSE}
-#ggmsa alignment 
+researchggmsa <- readRDS("../Data_Course_ROSATI/Final Project/ggmsa_resaerch_alignment_small.RDS")
 
-ggmsaresearch <- readRDS("../Data_Course_ROSATI/Final Project/ggmsa_resaerch_alignment.RDS")
-
-ggmsaresearch
+researchggmsa
 
 #MSA alignment
 msaalign <- readRDS("../Data_Course_ROSATI/Final Project/research_sequences_alignment.RDS")
@@ -89,19 +88,25 @@ plot(msaex_pratchet)
 ___
 
 Build a phylogenetic tree with bootsttrap values
-```{r message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 fitex = pml(msaex_UPGMA, data=phang.alignex)
 print(fitex)
 
 #fitJCex <- optim.pml(fitex,model="JC", rearrangement = "stochastic")
 
 fitJCex <- readRDS("../Data_Course_ROSATI/Final Project/fitJCex.RDS")
+```
+
+
+```{r message=FALSE, warning=FALSE}
 logLik(fitJCex)
 
 #bootstrapping
 
 bsrex <- bootstrap.pml(fitJCex, bs=100, optNi=TRUE)
 bsrex <- readRDS("../Data_Course_ROSATI/Final Project/boot_strp_research_seqs.RDS")
+```
+```{r message=FALSE, warning=FALSE}
 plotBS((fitJCex$tree), bsrex, p=50, type="p", bs.col = "red")
 ```
 
