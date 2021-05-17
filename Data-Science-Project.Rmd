@@ -1,6 +1,6 @@
 ---
 title: "Data Science Project"
-author: "Ethan Rosati"
+author:
 output:
   html_document: default
   pdf_document: default
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This [sequence data](https://github.com/rosatiem98/rosatiem98.github.io/blob/b683b09421b8428a629ebf75f9f32f0e1ba99ac7/plant_ITS%20(1).fasta) is a collection of DNA sequence of the entire ITS gene region in Angiosperm and Gymnosperm samples pulled from online databases. This set of [data](https://github.com/rosatiem98/rosatiem98.github.io/blob/859c3a36f1475da382ad317598b7b1769f2bd096/DNA%20extraction%20sequences.docx) is a collection of DNA sequences gathered through DNA extraction and amplification of the ITS gene region in herbarium specimens. 
 
-The analysis preformed will be done with a small DNA data set with 19 samples from the extraction DNA and samples from the online database DNA. In total a dataset of 399 sequences is analyzed.
+The analysis preformed will be done with a small DNA data set with 19 samples from the extraction DNA and samples from the online database DNA. In total a data set of 399 sequences are analyzed. Number of sequences come from excluding species sequences that were not unique or duplicated and [species](https://github.com/rosatiem98/rosatiem98.github.io/blob/9027bb5a2635ec01c4091367c3b9e4804ab42a94/number_of_hits.tsv) of interest. 
 
 ![Herbarium Specimen](./Gymnosperm specimen.jpg)
 
@@ -48,7 +48,7 @@ myspecies <- readDNAStringSet("./Interested Species ITS 2.fasta")
 duplicated(myspecies)
 ```
 
-```{r echo=FALSE, message=FALSE,warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 un <- unique(myspecies)
 
 align399 <- readRDS("./finalproject/subset_msa_align.RDS")
