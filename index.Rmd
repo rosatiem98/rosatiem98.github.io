@@ -3,7 +3,7 @@ title: "Home"
 author: "Ethan Rosati"
 output: html_document
 ---
-Helpful Links:
+# Helpful Links:
 
 ___
 
