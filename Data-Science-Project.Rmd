@@ -197,6 +197,7 @@ ___
 ```{r message= FALSE, warning=FALSE}
 
 circle_tree <- ggtree(tre, branch.length = "none", layout ="circular") + theme_tree2()
+circle_tree
 ggsave(filename = "circle_tree.png")
 square_tree <- ggtree(tre) + geom_tree() + theme_tree2()
 ggsave(filename = "square_tree.png")  
