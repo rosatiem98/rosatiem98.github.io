@@ -14,11 +14,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This [sequence data](https://github.com/rosatiem98/rosatiem98.github.io/blob/b683b09421b8428a629ebf75f9f32f0e1ba99ac7/plant_ITS%20(1).fasta) is a collection of DNA sequence of the entire ITS gene region in Angiosperm and Gymnosperm samples pulled from online databases. This set of [data](https://github.com/rosatiem98/rosatiem98.github.io/blob/c03555493c164c0240d596f179b77a41cbd2ff07/Research%20Sequences.docx) is a collection of DNA sequences gathered through DNA extraction and amplification of the ITS gene region in herbarium specimens. 
 
-The analysis preformed will be done with a small DNA data set with 19 samples from the extraction DNA and 655 smaples from the online database DNA. 
+The analysis preformed will be done with a small DNA data set with 19 samples from the extraction DNA and samples from the online database DNA. In total a dataset of 399 sequences is analyzed.
 
 ![Herbarium Specimen](./Gymnosperm specimen.jpg)
 
-The purpose of this analysis is to determine the evolutionary differences between angiosperm and gymnosperm specimens. From analyzing differences, a phylogenetic tree is built around the ITS gene region of these two clades. 
+
+The purpose of this analysis is to determine the evolutionary differences between angiosperm and gymnosperm specimens. From analyzing differences, a phylogenetic tree is built around the ITS gene region of these two groups. 
 
 ___
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -193,15 +194,40 @@ tre$tip.label[399] <- names399
 ___
 
 ## Exploring Phylogenetic trees
-```{r echo=FALSE, message= FALSE, warning=FALSE}
+```{r message= FALSE, warning=FALSE}
 
-ggtree(tre, branch.length = "none", layout = "circular")
-
-ggtree(tre) + geom_tree() + theme_tree()
-
+circle_tree <- ggtree(tre, branch.length = "none", layout ="circular") + theme_tree2()
+ggsave(filename = "circle_tree.png")
+square_tree <- ggtree(tre) + geom_tree() + theme_tree2()
+ggsave(filename = "square_tree.png")  
 ```
 
 
+## Subsetting tree 
+
+```{r message=FALSE, warning=FALSE}
+tree50 <- rtree(50)
+
+ggtree(tree50) + theme_tree2() + geom_tiplab2()
+
+
+#Creating 5 separate random trees using rtree function
+
+
+
+data(tre)
+layout(matrix(1:4, 2,2))
+for (i in 1:5) plot(rtree(20))
+
+```
+
+## Observations and conclusions
+
+Based on the trees that were generated one observation that can be made is in the large circular tree the species are grouped into large clades. This may be indicative of gymnosperm and angiosperm species grouping together based on the ITS gene region. Another possibility is because of the repeated species samples collected. When plotting a basic rectangular tree there are some species that have pronounced branches. 
+
+When plotting 5 random trees using "tre" tree the nodes on the tree are observed to shift. This may be due to the samples plotted are similar or are the same species with slightly different ITS gene sequence.
+
+This project's purpose was to gather full ITS gene sequences from angiosperm and gymnosperm species and build a phylogeny with the aligned sequences. This was accomplished on a foundational level. In the future the relationships within the trees observed will be further analyzed through further phylogenetic analysis and tree manipulation. 
 
 
 
