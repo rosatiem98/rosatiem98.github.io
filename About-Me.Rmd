@@ -1,6 +1,5 @@
 ---
-title: "ABOUT ME" 
-
+title: "ABOUT ME"
 ---
 ### Bibliography:
 I am a  biotechnology student studying biotechnology at Utah Valley University. I have worked on research projects involving phylogeny of Herbarium specimens and biofuel production using microalgae. 
@@ -9,4 +8,4 @@ I am a  biotechnology student studying biotechnology at Utah Valley University. 
 ### Links 
 Linkedin: https://www.linkedin.com/in/ethan-rosati-91592219a/
 
-CV: https://github.com/rosatiem98/rosatiem98.github.io/blob/4da98e1d7f08e2fd4b89395e16daf54120a7394b/Updated-2021-CV.pdf
+CV: https://github.com/rosatiem98/rosatiem98.github.io/blob/9fac14ff11661dc973a4eeb1720f0b6a26a737c8/CV%202022%202022.pdf
